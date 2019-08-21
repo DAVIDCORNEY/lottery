@@ -1,8 +1,9 @@
 import React from "react";
+import "./LotteryBall.css";
 
 const LotteryBall = () => {
   return (
-    <div>
+    <div className="LotteryBall">
       <p>Ball</p>
     </div>
   );
