@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { threadId } from "worker_threads";
 
 class Lottery extends Component {
   static defaultProps = {
