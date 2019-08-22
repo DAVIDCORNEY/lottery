@@ -12,7 +12,7 @@ class Lottery extends Component {
   render() {
     return (
       <section className="Lottery">
-        <h1 />
+        <h1>{this.props.title}</h1>
       </section>
     );
   }
