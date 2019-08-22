@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 
 class Lottery extends Component {
-  state = {  }
+  static defaultProps = {
+    title: "Lottery",
+    maxBalls: 6,
+    maxNum: 40
+    }
   render() { 
     return (  );
   }
