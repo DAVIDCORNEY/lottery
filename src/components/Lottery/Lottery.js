@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { threadId } from "worker_threads";
 
 class Lottery extends Component {
   static defaultProps = {
@@ -7,14 +8,21 @@ class Lottery extends Component {
     maxNum: 40
   };
   state = {
-    nums: []
+    nums: Array.from({ length: this.props.maxBalls })
   };
+
+  generate = () => {};
+
+  handleClick = () => {
+    this.generate();
+  };
+
   render() {
     return (
       <section className="Lottery">
         <h1>{this.props.title}</h1>
         <div>Balls</div>
-        <button>Play Lottery</button>
+        <button onClick={this.handleClick}>Play Lottery</button>
       </section>
     );
   }
