@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import LotteryBall from "../LotteryBall/LotteryBall";
 
 class Lottery extends Component {
   static defaultProps = {
@@ -17,10 +18,15 @@ class Lottery extends Component {
   };
 
   render() {
+    const { nums } = this.state;
     return (
       <section className="Lottery">
         <h1>{this.props.title}</h1>
-        <div>Balls</div>
+        <div>
+          {nums.map(num => (
+            <LotteryBall num={num} />
+          ))}
+        </div>
         <button onClick={this.handleClick}>Play Lottery</button>
       </section>
     );
